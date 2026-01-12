@@ -2917,25 +2917,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2791426516321643179, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2791426516321643179, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
-      propertyPath: m_GravityScale
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3258349094782164065, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3276250763197285038, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3276250763197285038, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 892289275
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -3138,6 +3138,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1002637792}
+    - target: {fileID: 4871436809484177003, guid: 6ecd1cdf3e6139d48951de2f168aabdf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4976960484373142717, guid: 6ecd1cdf3e6139d48951de2f168aabdf, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4115,11 +4119,11 @@ MonoBehaviour:
   sfxSource: {fileID: 1372239073}
   backgroundMusic: {fileID: 8300000, guid: b1cc72c1cbbff184bbba857f0d827ba8, type: 3}
   soundEffects:
-  - name: footstep
+  - type: 0
     clip: {fileID: 8300000, guid: dba34e5a470de9f468b99efb363e6a41, type: 3}
-  - name: givekey
+  - type: 0
     clip: {fileID: 8300000, guid: 783c0a9c714077f48a19a45e655b428b, type: 3}
-  - name: dooropen
+  - type: 0
     clip: {fileID: 8300000, guid: d3e4bd5449d1e1848a62f02211a0e32d, type: 3}
 --- !u!1 &1907198143 stripped
 GameObject:

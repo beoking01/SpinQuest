@@ -59,27 +59,27 @@
     <UnityVersion>6000.0.42f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\pta13\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.3\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\pta13\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.2.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="D:\Unity\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="D:\Unity\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="D:\Unity\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
-    <Compile Include="Assets\Scripts\GameLogic\BoxWood.cs" />
-    <Compile Include="Assets\Scripts\GameLogic\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
-    <Compile Include="Assets\Scripts\GameLogic\RotationMap.cs" />
-    <Compile Include="Assets\Scripts\Manager\ChooseLevel.cs" />
+    <Compile Include="Assets\Scripts\Manager\LevelManager\LevelSelectUI.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\Puzzle\RotationMap.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\Environment\Key.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\Environment\BoxWood.cs" />
+    <Compile Include="Assets\Scripts\Manager\SoundManager\SoundType.cs" />
     <Compile Include="Assets\Scripts\Manager\LevelManager\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\Environment\Trap.cs" />
+    <Compile Include="Assets\Scripts\Manager\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\SoundManager\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Manager\EasyEventManager.cs" />
-    <Compile Include="Assets\Scripts\Manager\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\GameLogic\Key.cs" />
-    <Compile Include="Assets\Scripts\GameLogic\Door.cs" />
-    <Compile Include="Assets\Scripts\GameLogic\Trap.cs" />
-    <Compile Include="Assets\Scripts\Manager\SoundType.cs" />
-    <Compile Include="Assets\Scripts\Manager\MenuGame.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\Environment\Door.cs" />
+    <Compile Include="Assets\Scripts\Manager\UI\MenuGame.cs" />
     <Compile Include="Assets\Scripts\Manager\LevelManager\LevelButton.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\Player\PlayerMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
