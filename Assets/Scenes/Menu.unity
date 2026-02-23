@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 295138833}
   - component: {fileID: 295138832}
   - component: {fileID: 295138831}
+  - component: {fileID: 295138834}
   m_Layer: 5
   m_Name: PlayBtn
   m_TagString: Untagged
@@ -435,6 +436,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295138829}
   m_CullTransparentMesh: 1
+--- !u!114 &295138834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295138829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8592f572bd2f81149be9d45db1460fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizeKey: msg_start_game
 --- !u!1 &414271754
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +461,7 @@ GameObject:
   - component: {fileID: 414271758}
   - component: {fileID: 414271757}
   - component: {fileID: 414271756}
+  - component: {fileID: 414271759}
   m_Layer: 5
   m_Name: QuitBtn
   m_TagString: Untagged
@@ -568,6 +583,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414271754}
   m_CullTransparentMesh: 1
+--- !u!114 &414271759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414271754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8592f572bd2f81149be9d45db1460fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizeKey: msg_quit
 --- !u!1 &618029757
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,6 +2066,7 @@ GameObject:
   - component: {fileID: 1912439044}
   - component: {fileID: 1912439043}
   - component: {fileID: 1912439042}
+  - component: {fileID: 1912439045}
   m_Layer: 5
   m_Name: CreditBtn
   m_TagString: Untagged
@@ -2147,6 +2176,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912439040}
   m_CullTransparentMesh: 1
+--- !u!114 &1912439045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912439040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8592f572bd2f81149be9d45db1460fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizeKey: msg_credit
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

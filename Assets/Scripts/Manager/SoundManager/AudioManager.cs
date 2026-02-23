@@ -49,11 +49,11 @@ public class AudioManager : MonoBehaviour
     }
     void OnEnable()
     {
-        EasyEventManager.OnPlaySound += HandlePlayerSFX;
+        SoundEventManager.OnPlaySound += HandlePlayerSFX;
     }
     void OnDisable()
     {
-        EasyEventManager.OnPlaySound -= HandlePlayerSFX;
+        SoundEventManager.OnPlaySound -= HandlePlayerSFX;
     }
 
     // Nhạc nền
@@ -76,40 +76,5 @@ public class AudioManager : MonoBehaviour
         Debug.Log("Sound");
         sfxSource.PlayOneShot(clip);
     }
-
-    // // Phát hiệu ứng 1 lần
-    // public void PlaySFX(AudioClip clip)
-    // {
-    //     if (clip == null) return;
-    //     sfxSource.PlayOneShot(clip);
-    // }
-
-    // Phát hiệu ứng theo tên
-    // public void PlaySFX(string name)
-    // {
-    //     if (sfxDictionary.TryGetValue(name, out AudioClip clip))
-    //     {
-    //         sfxSource.PlayOneShot(clip);
-    //     }
-    //     else
-    //     {
-    //         Debug.LogWarning($"Không tìm thấy hiệu ứng âm thanh: {name}");
-    //     }
-    // }
-
-    // Phát hiệu ứng lặp (loop)
-    // public void PlayLoopSFX(AudioClip clip)
-    // {
-    //     if (clip == null) return;
-    //     sfxSource.clip = clip;
-    //     sfxSource.loop = true;
-    //     sfxSource.Play();
-    // }
-
-    // // Dừng hiệu ứng lặp
-    // public void StopLoopSFX()
-    // {
-    //     sfxSource.loop = false;
-    //     sfxSource.Stop();
-    // }
+    
 }

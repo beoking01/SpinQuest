@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class EasyEventManager : MonoBehaviour
+public class SoundEventManager : MonoBehaviour
 {
     public static event Action<SoundType> OnPlaySound;
 

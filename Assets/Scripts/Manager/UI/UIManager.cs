@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private GameObject gameWinUI;
     [SerializeField] private GameObject pauseUI;
+    // [SerializeField] private GameObject languageSwitchUI;
 
     private void OnEnable()
     {
@@ -27,6 +28,9 @@ public class UIManager : MonoBehaviour
 
         if (pauseUI == null)
             pauseUI = GameObject.FindWithTag("PauseUI");
+
+        // if (languageSwitchUI == null)
+        //     languageSwitchUI = GameObject.FindWithTag("LanguageSwitchUI");
 
         if (gameOverUI != null) gameOverUI.SetActive(false);
         if (gameWinUI != null) gameWinUI.SetActive(false);
@@ -84,4 +88,21 @@ public class UIManager : MonoBehaviour
     {
         if (pauseUI != null) pauseUI.SetActive(false);
     }
+
+
+    // public void ToggleLanguageSwitch()
+    // {
+    //     if (languageSwitchUI != null)
+    //         languageSwitchUI.SetActive(!languageSwitchUI.activeSelf);
+    // }
+
+    // public void ShowLanguageSwitch()
+    // {
+    //     if (languageSwitchUI != null) languageSwitchUI.SetActive(true);
+    // }
+
+    // public void HideLanguageSwitch()
+    // {
+    //     if (languageSwitchUI != null) languageSwitchUI.SetActive(false);
+    // }
 }

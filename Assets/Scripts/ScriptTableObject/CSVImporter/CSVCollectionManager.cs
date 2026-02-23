@@ -1,0 +1,114 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.Networking;
+using Cysharp.Threading.Tasks;
+
+#region Summary
+// This works with Google Sheets. The online Google Sheets file will need to be public. And each sheet within the file will be one collection.
+
+// This is the script that will download the CSV files and save them, and create a collection of all downloaded files.
+// Any class that needs to gain access to a CSV file, can call the GetCollection function.
+
+// This script requires the UniTask package. But if you do not have the package, you can modify the function to use a coroutine instead. UniTask is just more useful.
+#endregion
+
+[CreateAssetMenu(fileName = "CSVCollectionManager", menuName = "Scriptable Object/CSV Tools/CSV Collection Manager")]
+
+public class CSVCollectionManager : ScriptableObject
+{
+    	// CSV files will be downloaded to this path. Change this if needed
+	private const string DownloadPathTemplate = "Assets/CSV/{0}.csv";
+	// Download URL Template for exporting Google Sheet as a CSV file. {0} will be the public link to the Sheet file. {1} is the sheet ID found at the end of the link of {0}
+	private const string DownloadUrlTemplate = "{0}export?format=csv&gid={1}";
+
+	public string GsDatabasePath;
+	public List<CSVDownloadData> DownloadData;
+
+	public List<TextAsset> Collection;
+
+	private string GetDownloadPath(string sheetId)
+	{
+		return string.Format(DownloadUrlTemplate, GsDatabasePath, sheetId);
+	}
+
+	/// <summary>
+	/// Get the local file path for saving CSV files
+	/// </summary>
+	private string GetSavePath(string className)
+	{
+		return string.Format(DownloadPathTemplate, className);
+	}
+
+	/// <summary>
+	/// Fetch a collection by name
+	/// </summary>
+	/// <param name="collectionName">Collection name should always be the class name of what you're parsing the CSV into.</param>
+	/// <returns></returns>
+	public TextAsset GetCollection(string collectionName)
+	{
+		foreach (var item in Collection)
+		{
+			if (item.name == collectionName)
+				return item;
+		}
+		return null;
+	}
+
+	/// <summary>
+	/// This function downloads the CSV files from Google Sheets, then add Text Assets to the Collection list.
+	/// </summary>
+	/// <returns></returns>
+	public async UniTask FetchCSV()
+	{
+		if (DownloadData == null || DownloadData.Count == 0)
+		{
+			EditorUtility.DisplayDialog("Error", "DownloadData is empty!", "OK");
+			return;
+		}
+
+		if (Collection == null)
+		{
+			Collection = new List<TextAsset>();
+		}
+
+		Collection.Clear();
+
+		foreach (var data in DownloadData)
+		{
+			string url = GetDownloadPath(data.SheetId);
+			UnityWebRequest webRequest = UnityWebRequest.Get(url);
+			await webRequest.SendWebRequest();
+
+			if (webRequest.result == UnityWebRequest.Result.Success)
+			{
+				string csv = webRequest.downloadHandler.text;
+				string savePath = string.Format(DownloadPathTemplate, data.ClassName);
+
+				File.WriteAllText(savePath, csv);
+				AssetDatabase.Refresh();
+
+				var textAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(savePath);
+				if (textAsset != null)
+				{
+					Collection.Add(textAsset);
+				}
+			}
+			else
+			{
+				EditorUtility.DisplayDialog("Error", $"Failed to download: {url}\n{webRequest.error}", "OK");
+			}
+		}
+
+		EditorUtility.DisplayDialog("Download CSV", "Download CSV finish", "OK");
+	}
+}
+[Serializable]
+public class CSVDownloadData
+{
+	public string ClassName;
+	public string SheetId;
+}

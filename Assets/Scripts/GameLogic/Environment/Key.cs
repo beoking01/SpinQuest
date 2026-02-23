@@ -15,7 +15,7 @@ public class Key : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             gameManager.OpenDoor();
-            EasyEventManager.PLaySound(SoundType.Dooropen);
+            SoundEventManager.PLaySound(SoundType.Dooropen);
             Destroy(gameObject);
         }
     }

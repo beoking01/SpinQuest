@@ -12,13 +12,11 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;     
     [SerializeField] private Transform groundCheck;
     private Animator animator;
-    private AudioManager audioManager;
     private GameManager gameManager;
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        audioManager = AudioManager.Instance;
         gameManager = GameManager.Instance;
     }
 
@@ -53,7 +51,7 @@ public class PlayerMove : MonoBehaviour
             footstepTimer -= Time.deltaTime;
             if (footstepTimer <= 0f)
             {
-                EasyEventManager.PLaySound(SoundType.Footstep);
+                SoundEventManager.PLaySound(SoundType.Footstep);
                 footstepTimer = footstepDelay;
             }
         }

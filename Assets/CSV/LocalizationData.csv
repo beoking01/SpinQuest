@@ -1,0 +1,14 @@
+Key,EN,VN
+String,String,String
+msg_start,Play,Bắt đầu
+msg_game_over,Game Over,Thua cuộc
+msg_again,Again,Chơi lại
+msg_menu,Menu,Menu
+msg_next,Next,Tiếp
+msg_setting,Setting,Cài đặt
+msg_back,Back,Quay trở lại
+msg_credit,Credits,Credit
+msg_english,English,Tiếng Anh
+msg_vietnam,Vietnamese,Tiếng Việt
+msg_language,Language,Ngôn ngữ
+msg_quit,Quit,Thoát

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        LocalizationManager.Init();
     }
 
     public bool IsPlay() => isPlay;

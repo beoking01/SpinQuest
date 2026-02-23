@@ -5,7 +5,7 @@ public class BoxWood : MonoBehaviour
     private Rigidbody2D rb;
     private GameManager gameManager;
     private GameObject player;
-    public float deadlyVelocity = 1f; // Ngưỡng vận tốc gây chết, có thể điều chỉnh trong Inspector
+    public float deadlyVelocity = 1f; // Ngưỡng vận tốc gây chết
 
     void Start()
     {
