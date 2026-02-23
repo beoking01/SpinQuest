@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 5418147}
   - component: {fileID: 5418149}
   - component: {fileID: 5418148}
+  - component: {fileID: 5418150}
   m_Layer: 5
   m_Name: LeftQ
   m_TagString: Untagged
@@ -255,6 +256,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5418146}
   m_CullTransparentMesh: 1
+--- !u!114 &5418150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5418146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8592f572bd2f81149be9d45db1460fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizeKey: msg_rotationLeft
 --- !u!1 &33463925
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &313736575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,6 +676,7 @@ GameObject:
   - component: {fileID: 380938838}
   - component: {fileID: 380938840}
   - component: {fileID: 380938839}
+  - component: {fileID: 380938841}
   m_Layer: 5
   m_Name: RightR
   m_TagString: Untagged
@@ -787,6 +802,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380938837}
   m_CullTransparentMesh: 1
+--- !u!114 &380938841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380938837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8592f572bd2f81149be9d45db1460fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizeKey: msg_rotationRight
 --- !u!1 &409310499
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &409310500
 Transform:
   m_ObjectHideFlags: 0
@@ -1075,6 +1103,7 @@ GameObject:
   - component: {fileID: 706718051}
   - component: {fileID: 706718053}
   - component: {fileID: 706718052}
+  - component: {fileID: 706718054}
   m_Layer: 5
   m_Name: RotationTuto
   m_TagString: Untagged
@@ -1200,6 +1229,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706718050}
   m_CullTransparentMesh: 1
+--- !u!114 &706718054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706718050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8592f572bd2f81149be9d45db1460fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalizeKey: msg_rotation
 --- !u!1 &715299331
 GameObject:
   m_ObjectHideFlags: 0

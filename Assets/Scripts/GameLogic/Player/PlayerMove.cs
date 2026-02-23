@@ -23,7 +23,6 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         isGround = Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
-        Debug.Log(isGround);
 
         if (gameManager.IsPlay())
         {

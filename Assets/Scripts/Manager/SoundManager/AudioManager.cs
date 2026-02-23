@@ -70,10 +70,8 @@ public class AudioManager : MonoBehaviour
     {
         if (!sfxDictionary.TryGetValue(type, out AudioClip clip))
         {
-            Debug.Log("Error Sound");
             return;
         }
-        Debug.Log("Sound");
         sfxSource.PlayOneShot(clip);
     }
     

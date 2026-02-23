@@ -1,7 +1,7 @@
 Key,EN,VN
 String,String,String
 msg_start,Play,Bắt đầu
-msg_game_over,Game Over,Thua cuộc
+msg_gameOver,Game Over,Thua cuộc
 msg_again,Again,Chơi lại
 msg_menu,Menu,Menu
 msg_next,Next,Tiếp
@@ -12,3 +12,10 @@ msg_english,English,Tiếng Anh
 msg_vietnam,Vietnamese,Tiếng Việt
 msg_language,Language,Ngôn ngữ
 msg_quit,Quit,Thoát
+msg_win,Win!!!,Chiển thắng !!!
+msg_next,Next,Tiếp tục
+msg_resume,Resume,Chơi tiếp
+msg_restart,Restart,Chơi lại
+msg_rotation,Use Q/E to rotation map,Sử dung Q/E để xoay căn phòng
+msg_rotationLeft,Use Q to left up map,Sử dung Q để xoay lên trái
+msg_rotationRight,Use E to right up map,Sử dụng E để xoay lên phải
