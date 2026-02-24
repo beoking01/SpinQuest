@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public UIManager uiManager; // kéo thả trong inspector
+    [SerializeField] private UIManager uiManager; // kéo thả trong inspector
 
     private bool isPlay = true;
     private bool isOpen = false;

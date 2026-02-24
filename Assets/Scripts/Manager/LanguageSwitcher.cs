@@ -2,9 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-/// <summary>
 /// Script quản lý việc thay đổi ngôn ngữ thông qua UI buttons
-/// </summary>
 public class LanguageSwitcher : MonoBehaviour
 {
     [SerializeField] private Button englishButton;
@@ -25,9 +23,9 @@ public class LanguageSwitcher : MonoBehaviour
 
         // Cập nhật UI hiện tại
         // UpdateLanguageUI();
-        Debug.Log($"LanguageSwitcher START on {gameObject.name}");
-        Debug.Log($"EnglishButton = {englishButton}");
-        Debug.Log($"VietnameseButton = {vietnameseButton}");
+        // Debug.Log($"LanguageSwitcher START on {gameObject.name}");
+        // Debug.Log($"EnglishButton = {englishButton}");
+        // Debug.Log($"VietnameseButton = {vietnameseButton}");
     }
 
     private void OnDestroy()

@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour
         }
 
         // Nếu chỉ có Menu hoặc chưa có gì, unlock level đầu tiên (build index 2)
-        int firstPlayableIndex = 2; // user-specified start index
+        int firstPlayableIndex = 2; 
         if ((unlocked.Count == 0 || (unlocked.Count == 1 && unlocked.Contains("Menu"))) 
             && SceneManager.sceneCountInBuildSettings > firstPlayableIndex)
         {

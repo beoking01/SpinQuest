@@ -66,6 +66,7 @@ public class UIManager : MonoBehaviour
         // Load scene tiếp theo (index + 1)
         if (currentIndex + 1 < SceneManager.sceneCountInBuildSettings)
         {
+            LevelManager.Instance.UnlockNextByBuildIndex(currentIndex);
             SceneManager.LoadScene(currentIndex + 1);
             Time.timeScale = 1f;
         }

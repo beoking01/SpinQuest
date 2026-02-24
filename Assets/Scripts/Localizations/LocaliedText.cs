@@ -41,11 +41,11 @@ public class LocalizedText : MonoBehaviour
 	{
 		if (_text == null)
 		{
-			Debug.LogWarning($"TextMeshProUGUI not found on GameObject '{gameObject.name}'", gameObject);
+			// Debug.LogWarning($"TextMeshProUGUI not found on GameObject '{gameObject.name}'", gameObject);
 			return;
 		}
 
 		_text.SetText(LocalizationManager.GetString(LocalizeKey));
-		Debug.Log($"Refreshing {gameObject.name} with lang {LocalizationManager.CurrentLanguage}");
+		// Debug.Log($"Refreshing {gameObject.name} with lang {LocalizationManager.CurrentLanguage}");
 	}
 }

@@ -66,8 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScriptTableObject\CSVImporter\CSVCollectionManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\LevelManager\LevelConfig.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Manager\LevelManager\LevelSelectUI.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Puzzle\RotationMap.cs" />
     <Compile Include="Assets\Scripts\Localizations\LocalizationCollection.cs" />
     <Compile Include="Assets\Scripts\ScriptTableObject\CSVImporter\CSVImporter.cs" />
@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Manager\UI\MenuGame.cs" />
     <Compile Include="Assets\Scripts\Localizations\LocaliedText.cs" />
     <Compile Include="Assets\Scripts\Manager\LevelManager\LevelButton.cs" />
+    <Compile Include="Assets\Scripts\Manager\LevelManager\ChooseLevel.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Player\PlayerMove.cs" />
   </ItemGroup>
   <ItemGroup>
