@@ -12,7 +12,14 @@ public class LevelManager : MonoBehaviour
     private string savePath;
 
     [System.Serializable]
-    private class SaveData { public List<string> unlocked = new List<string>(); }
+    private class SaveData { 
+        public List<string> unlocked = new List<string>(); 
+        public List<StarData> stars = new List<StarData>();
+    }
+    [System.Serializable]
+    private class StarData{public string sceneName; public int star;}
+    Dictionary<string, int> starDict = 
+    new Dictionary<string, int>(System.StringComparer.OrdinalIgnoreCase);
 
     private void Awake()
     {
@@ -33,7 +40,17 @@ public class LevelManager : MonoBehaviour
                 var json = File.ReadAllText(savePath);
                 var data = JsonUtility.FromJson<SaveData>(json);
                 if (data != null && data.unlocked != null)
+                {
                     unlocked = new HashSet<string>(data.unlocked, System.StringComparer.OrdinalIgnoreCase);
+                }
+                starDict.Clear();
+                if(data.stars != null)
+                {
+                    foreach(var s in data.stars)
+                    {
+                        starDict[s.sceneName] = s.star;
+                    }
+                }
             }
             catch (System.Exception e)
             {
@@ -61,7 +78,17 @@ public class LevelManager : MonoBehaviour
     {
         try
         {
-            var data = new SaveData { unlocked = new List<string>(unlocked) };
+            var data = new SaveData { 
+                unlocked = new List<string>(unlocked),
+                stars = new List<StarData>()
+            };
+            foreach(var kv in starDict)
+            {
+                data.stars.Add(new StarData{
+                    sceneName = kv.Key, 
+                    star = kv.Value
+                });
+            }
             var json = JsonUtility.ToJson(data);
             File.WriteAllText(savePath, json);
         }
@@ -92,5 +119,22 @@ public class LevelManager : MonoBehaviour
             string nextName = Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(next));
             Unlock(nextName);
         }
+    }
+    public void SaveStars(string sceneName, int stars)
+    {
+        if (string.IsNullOrEmpty(sceneName)) return;
+
+        int oldStars = GetStars(sceneName);
+
+        if (stars > oldStars)
+        {
+            starDict[sceneName] = stars;
+            Save();
+        }
+    }
+    public int GetStars(string sceneName)
+    {
+        if (string.IsNullOrEmpty(sceneName)) return 0;
+        return starDict.TryGetValue(sceneName, out int s) ? s : 0;
     }
 }
