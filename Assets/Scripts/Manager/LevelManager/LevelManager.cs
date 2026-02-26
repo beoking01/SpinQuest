@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -124,7 +125,11 @@ public class LevelManager : MonoBehaviour
     {
         if (string.IsNullOrEmpty(sceneName)) return;
 
-        int oldStars = GetStars(sceneName);
+        int oldStars = 0;
+        if(!IsUnlocked(sceneName))
+        {
+            oldStars = GetStars(sceneName);
+        }
 
         if (stars > oldStars)
         {

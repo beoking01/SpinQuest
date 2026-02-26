@@ -12,12 +12,21 @@ public class LevelController : MonoBehaviour
         // Kiểm tra an toàn trước khi gọi hàm
         timeTracker.StartTimer();
     }
+    void Update()
+    {
+        if(GameManager.Instance.isWinGame())
+        {
+            LevelComplete();
+        }
+        
+    }
 
     public void LevelComplete()
     {
         timeTracker.StopTimer();
         int starsEarned = new StarCalculate().CalculateStars(timeTracker.timeElapsed, checkRotation.countRotation, levelConfig);
         
+        LevelManager.Instance.SaveStars(levelConfig.levelName, starsEarned);
         Debug.Log("Stars earned: " + starsEarned);
     }
 }

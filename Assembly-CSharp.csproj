@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Localizations\LocalizationManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Manager\SoundManager\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\UI\starShowWin.cs" />
     <Compile Include="Assets\Scripts\Manager\LanguageSwitcher.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Point\TimeTracker.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Environment\Door.cs" />

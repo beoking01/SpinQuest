@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     private bool isPlay = true;
     private bool isOpen = false;
+    private bool isWin = false;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     public bool IsPlay() => isPlay;
     public bool IsOpen() => isOpen;
+    public bool isWinGame() => isWin;
 
     public void OpenDoor() => isOpen = true;
 
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
     {
         isOpen = false;
         isPlay = false;
+        isWin = false;
         Time.timeScale = 0f;
         if (uiManager != null) uiManager.ShowGameOver();
     }
@@ -39,6 +42,7 @@ public class GameManager : MonoBehaviour
         // LevelManager.Instance.Unlock(SceneManager.GetActiveScene().name);
         isPlay = false;
         isOpen = false;
+        isWin = true;
         Time.timeScale = 0f;
         if (uiManager != null) uiManager.ShowWin();
     }

@@ -61,7 +61,7 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.ResumeGame();
         // Lấy index của scene hiện tại
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log("Current Index: " + currentIndex);
+        // Debug.Log("Current Index: " + currentIndex);
 
         // Load scene tiếp theo (index + 1)
         if (currentIndex + 1 < SceneManager.sceneCountInBuildSettings)
