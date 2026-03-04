@@ -32,17 +32,25 @@ public class GameManager : MonoBehaviour
         isOpen = false;
         isPlay = false;
         isWin = false;
-        Time.timeScale = 0f;
-        if (uiManager != null) uiManager.ShowGameOver();
+        StartCoroutine(DelayGameOver());
     }
-
+    private System.Collections.IEnumerator DelayGameOver()
+    {
+        yield return new WaitForSeconds(2); // Delay 2 giây trước khi hiển thị Game Over UI
+        if (uiManager != null) uiManager.ShowGameOver();
+        Time.timeScale = 0f;
+    }
+    
     public void WinGame()
     {
-        // int index = SceneManager.GetActiveScene().buildIndex;
-        // LevelManager.Instance.Unlock(SceneManager.GetActiveScene().name);
         isPlay = false;
         isOpen = false;
         isWin = true;
+        StartCoroutine(DelayGameWin());
+    }
+    private System.Collections.IEnumerator DelayGameWin()
+    {
+        yield return new WaitForSeconds(2); // Delay 2 giây trước khi hiển thị Game Over UI
         Time.timeScale = 0f;
         if (uiManager != null) uiManager.ShowWin();
     }

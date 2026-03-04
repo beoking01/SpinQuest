@@ -14,7 +14,7 @@ public class LevelController : MonoBehaviour
     }
     void Update()
     {
-        if(GameManager.Instance.isWinGame())
+        if(GameManager.Instance.isWinGame() && !GameManager.Instance.IsPlay())
         {
             LevelComplete();
         }
@@ -25,8 +25,8 @@ public class LevelController : MonoBehaviour
     {
         timeTracker.StopTimer();
         int starsEarned = new StarCalculate().CalculateStars(timeTracker.timeElapsed, checkRotation.countRotation, levelConfig);
+        Debug.Log(timeTracker.timeElapsed);
+        LevelManager.Instance.SaveStars(levelConfig, starsEarned, timeTracker.timeElapsed, checkRotation.countRotation);
         
-        LevelManager.Instance.SaveStars(levelConfig.levelName, starsEarned);
-        Debug.Log("Stars earned: " + starsEarned);
     }
 }

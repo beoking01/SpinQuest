@@ -18,9 +18,21 @@ public class LevelManager : MonoBehaviour
         public List<StarData> stars = new List<StarData>();
     }
     [System.Serializable]
-    private class StarData{public string sceneName; public int star;}
+    private class StarData{
+        public string sceneName; 
+        public int star;
+        public float time;
+        public int rotation;
+        public LevelConfig levelConfig;
+    }
     Dictionary<string, int> starDict = 
     new Dictionary<string, int>(System.StringComparer.OrdinalIgnoreCase);
+    Dictionary<string, float> timeDict = 
+    new Dictionary<string, float>(System.StringComparer.OrdinalIgnoreCase);
+    Dictionary<string, int> rotationDict = 
+    new Dictionary<string, int>(System.StringComparer.OrdinalIgnoreCase);
+    Dictionary<string, LevelConfig> levelConfigDict = 
+    new Dictionary<string, LevelConfig>(System.StringComparer.OrdinalIgnoreCase);
 
     private void Awake()
     {
@@ -45,11 +57,19 @@ public class LevelManager : MonoBehaviour
                     unlocked = new HashSet<string>(data.unlocked, System.StringComparer.OrdinalIgnoreCase);
                 }
                 starDict.Clear();
+                timeDict.Clear();
+                rotationDict.Clear();
+                levelConfigDict.Clear();
+                
                 if(data.stars != null)
                 {
                     foreach(var s in data.stars)
                     {
                         starDict[s.sceneName] = s.star;
+                        timeDict[s.sceneName] = s.time;
+                        rotationDict[s.sceneName] = s.rotation;
+                        // make sure we can safely restore config even if null
+                        levelConfigDict[s.sceneName] = s.levelConfig;
                     }
                 }
             }
@@ -85,9 +105,17 @@ public class LevelManager : MonoBehaviour
             };
             foreach(var kv in starDict)
             {
+                // fetch associated auxiliary values safely
+                timeDict.TryGetValue(kv.Key, out float recordedTime);
+                rotationDict.TryGetValue(kv.Key, out int recordedRot);
+                levelConfigDict.TryGetValue(kv.Key, out LevelConfig recordedConfig);
+
                 data.stars.Add(new StarData{
                     sceneName = kv.Key, 
-                    star = kv.Value
+                    star = kv.Value,
+                    time = recordedTime,
+                    rotation = recordedRot,
+                    levelConfig = recordedConfig
                 });
             }
             var json = JsonUtility.ToJson(data);
@@ -121,25 +149,43 @@ public class LevelManager : MonoBehaviour
             Unlock(nextName);
         }
     }
-    public void SaveStars(string sceneName, int stars)
+    public void SaveStars(LevelConfig levelConfig, int stars, float time, int rotation)
     {
+        if (levelConfig == null) return;
+        string sceneName = levelConfig.levelName;
+        Debug.Log(stars + " stars earned for " + sceneName);
+        Debug.Log("Time: " + time + "s, Rotation: " + rotation);
         if (string.IsNullOrEmpty(sceneName)) return;
 
         int oldStars = 0;
-        if(!IsUnlocked(sceneName))
-        {
-            oldStars = GetStars(sceneName);
-        }
 
         if (stars > oldStars)
         {
             starDict[sceneName] = stars;
-            Save();
+            timeDict[sceneName] = time;
+            rotationDict[sceneName] = rotation;
+            levelConfigDict[sceneName] = levelConfig;
         }
+        Save();
     }
     public int GetStars(string sceneName)
     {
         if (string.IsNullOrEmpty(sceneName)) return 0;
         return starDict.TryGetValue(sceneName, out int s) ? s : 0;
+    }
+    public float GetTime(string sceneName)
+    {
+        if (string.IsNullOrEmpty(sceneName)) return 0f;
+        return timeDict.TryGetValue(sceneName, out float t) ? t : 0f;
+    }
+    public int GetRotation(string sceneName)
+    {
+        if (string.IsNullOrEmpty(sceneName)) return 0;
+        return rotationDict.TryGetValue(sceneName, out int r) ? r : 0;
+    }
+    public LevelConfig GetLevelConfig(string sceneName)
+    {
+        if (string.IsNullOrEmpty(sceneName)) return null;
+        return levelConfigDict.TryGetValue(sceneName, out LevelConfig lc) ? lc : null;
     }
 }

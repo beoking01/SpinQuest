@@ -22,6 +22,7 @@ public class Door : MonoBehaviour
         {
             if (gameManager.IsOpen())
             {
+                collision.gameObject.SetActive(false);
                 gameManager.WinGame();
             }
         }

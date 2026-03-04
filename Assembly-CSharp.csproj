@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScriptTableObject\CSVImporter\CSVCollectionManager.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\UI\InforStarShow.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Point\LevelController.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Puzzle\RotationMap.cs" />
     <Compile Include="Assets\Scripts\Localizations\LocalizationCollection.cs" />

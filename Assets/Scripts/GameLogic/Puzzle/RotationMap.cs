@@ -13,13 +13,13 @@ public class RotationMap : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && delay)
+        if (Input.GetKeyDown(KeyCode.Q) && delay && GameManager.Instance.IsPlay())
         {
             startPoint -= 90;
             targetRotation = Quaternion.Euler(0, 0, startPoint);
             StartCoroutine(waitTime());
         }
-        else if (Input.GetKeyDown(KeyCode.E) && delay)
+        else if (Input.GetKeyDown(KeyCode.E) && delay && GameManager.Instance.IsPlay())
         {
             startPoint += 90;
             targetRotation = Quaternion.Euler(0, 0, startPoint);
