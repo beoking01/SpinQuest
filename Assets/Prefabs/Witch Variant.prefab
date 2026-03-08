@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 361465586855405171, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.84
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 361465586855405171, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.76
+      value: -5.51
       objectReference: {fileID: 0}
     - target: {fileID: 361465586855405171, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
       propertyPath: m_LocalPosition.z
@@ -48,25 +48,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2791426516321643179, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3258349094782164065, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
       propertyPath: m_Name
       value: Witch Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 3276250763197285038, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3068605275717441512, guid: f1c0739a0473d2a42aea05f25820b823, type: 3}
-    - target: {fileID: 5486402869255685386, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 824b569dee6c4ca46af09877f6dc36f6, type: 2}
     - target: {fileID: 5990358355879582662, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.109375
+      propertyPath: m_Size.y
+      value: 1.1982615
       objectReference: {fileID: 0}
     - target: {fileID: 5990358355879582662, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.734375
+      propertyPath: m_Offset.x
+      value: -0.09429002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990358355879582662, guid: 7945beb6c186fec4084c4609afdc1834, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.30623904
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
