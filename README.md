@@ -18,19 +18,15 @@ Thay vì chỉ nhảy và di chuyển như platformer thông thường, người
     + Player Movement
 
 
-⬇️ Thêm GIF gameplay di chuyển tại đây
-
 ![Player Move](Assets/gifs/player_movement.gif)
 
 - Map Rotation Mechanic
 
-⬇️ Thêm GIF mechanic xoay map tại đây
 
 ![Map Rotation](Assets/gifs/map_rotation.gif)
 
 - Puzzle Example
 
-⬇️ Thêm GIF giải puzzle tại đây
 
 ![Puzzle example](Assets/gifs/puzzle_example.gif)
 
