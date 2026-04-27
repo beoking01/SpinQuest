@@ -59,7 +59,7 @@
     <UnityVersion>6000.0.42f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\pta13\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.2.1\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\pta13\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.2.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="D:\Unity\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="D:\Unity\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="D:\Unity\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\GameLogic\Environment\BoxWood.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Point\CheckRotation.cs" />
     <Compile Include="Assets\Scripts\Manager\SoundManager\SoundType.cs" />
+    <Compile Include="Assets\Scripts\Localizations\LanguageSwitcher.cs" />
     <Compile Include="Assets\Scripts\Manager\LevelManager\LevelManager.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Point\StarCalculate.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Environment\Trap.cs" />
@@ -84,7 +85,6 @@
     <Compile Include="Assets\Scripts\Manager\SoundManager\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UI\starShowWin.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Environment\Mud.cs" />
-    <Compile Include="Assets\Scripts\Manager\LanguageSwitcher.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Point\TimeTracker.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Environment\Door.cs" />
     <Compile Include="Assets\Scripts\Manager\SoundManager\SoundEventManager.cs" />
@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\Localizations\LocaliedText.cs" />
     <Compile Include="Assets\Scripts\Manager\LevelManager\LevelButton.cs" />
     <Compile Include="Assets\Scripts\Manager\LevelManager\ChooseLevel.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\Point\CanvasCameraAssigner.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Player\PlayerMove.cs" />
   </ItemGroup>
   <ItemGroup>

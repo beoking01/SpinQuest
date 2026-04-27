@@ -12,4 +12,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b03fc07c5aa18e4d8db0772b711e6f5, type: 3}
   m_Name: MyLocalization
   m_EditorClassIdentifier: 
-  DataTable: []
+  DataTable:
+  - Key: msg_start
+    EN: Play
+    VN: "B\u1EAFt \u0111\u1EA7u"
+  - Key: msg_gameOver
+    EN: Game Over
+    VN: "Thua cu\u1ED9c"
+  - Key: msg_again
+    EN: Again
+    VN: "Ch\u01A1i l\u1EA1i"
+  - Key: msg_menu
+    EN: Menu
+    VN: Menu
+  - Key: msg_next
+    EN: Next
+    VN: "Ti\u1EBFp"
+  - Key: msg_setting
+    EN: Setting
+    VN: "C\xE0i \u0111\u1EB7t"
+  - Key: msg_back
+    EN: Back
+    VN: "Quay tr\u1EDF l\u1EA1i"
+  - Key: msg_credit
+    EN: Credits
+    VN: Credit
+  - Key: msg_english
+    EN: English
+    VN: "Ti\u1EBFng Anh"
+  - Key: msg_vietnam
+    EN: Vietnamese
+    VN: "Ti\u1EBFng Vi\u1EC7t"
+  - Key: msg_language
+    EN: Language
+    VN: "Ng\xF4n ng\u1EEF"
+  - Key: msg_quit
+    EN: Quit
+    VN: "Tho\xE1t"
+  - Key: msg_win
+    EN: Win!!!
+    VN: "Chi\u1EC3n th\u1EAFng !!!"
+  - Key: msg_next
+    EN: Next
+    VN: "Ti\u1EBFp t\u1EE5c"
+  - Key: msg_resume
+    EN: Resume
+    VN: "Ch\u01A1i ti\u1EBFp"
+  - Key: msg_restart
+    EN: Restart
+    VN: "Ch\u01A1i l\u1EA1i"
+  - Key: msg_rotation
+    EN: Use Q/E to rotation map
+    VN: "S\u1EED dung Q/E \u0111\u1EC3 xoay c\u0103n ph\xF2ng"
+  - Key: msg_rotationLeft
+    EN: Use Q to left up map
+    VN: "S\u1EED dung Q \u0111\u1EC3 xoay l\xEAn tr\xE1i"
+  - Key: msg_rotationRight
+    EN: Use E to right up map
+    VN: "S\u1EED d\u1EE5ng E \u0111\u1EC3 xoay l\xEAn ph\u1EA3i"

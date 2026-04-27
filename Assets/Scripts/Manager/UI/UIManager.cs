@@ -79,6 +79,7 @@ public class UIManager : MonoBehaviour
 
     public void GoToMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
     public void ShowPause()

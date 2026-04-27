@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     }
     private System.Collections.IEnumerator DelayGameOver()
     {
-        yield return new WaitForSeconds(2); // Delay 2 giây trước khi hiển thị Game Over UI
+        yield return new WaitForSeconds(1); // Delay 1 giây trước khi hiển thị Game Over UI
         if (uiManager != null) uiManager.ShowGameOver();
         Time.timeScale = 0f;
     }
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
     }
     private System.Collections.IEnumerator DelayGameWin()
     {
-        yield return new WaitForSeconds(2); // Delay 2 giây trước khi hiển thị Game Over UI
+        yield return new WaitForSeconds(1); // Delay 1 giây trước khi hiển thị Game Over UI
         Time.timeScale = 0f;
         if (uiManager != null) uiManager.ShowWin();
     }

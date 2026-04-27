@@ -26,6 +26,10 @@ public class LocalizationManager
 
 	public static void Init()
 	{
+		// Always rebuild from source to avoid stale data after re-init.
+		_localizationDictionary[Language.EN].Clear();
+		_localizationDictionary[Language.VN].Clear();
+
 		var localizationData = Resources.Load<LocalizationCollection>(LocalizationCollectionAssetAddress);
 
 		// Kiểm tra xem asset có tồn tại không
@@ -53,14 +57,18 @@ public class LocalizationManager
 				continue;
 			}
 
-			_localizationDictionary[Language.EN].TryAdd(key, data.EN?.Trim() ?? string.Empty);
-			_localizationDictionary[Language.VN].TryAdd(key, data.VN?.Trim() ?? string.Empty);
+			// Use assignment so duplicated keys are overwritten by latest row instead of being silently ignored.
+			_localizationDictionary[Language.EN][key] = data.EN?.Trim() ?? string.Empty;
+			_localizationDictionary[Language.VN][key] = data.VN?.Trim() ?? string.Empty;
 		}
 
 
 		// Load lại ngôn ngữ đã lưu từ PlayerPrefs
 		string savedLanguage = PlayerPrefs.GetString("CurrentLanguage", Language.EN.ToString());
-		Language defaultLanguage = System.Enum.Parse<Language>(savedLanguage);
+		if (!System.Enum.TryParse(savedLanguage, out Language defaultLanguage))
+		{
+			defaultLanguage = Language.EN;
+		}
 		ChangeLanguage(defaultLanguage);
 		IsInitialized = true;
 	}
@@ -91,10 +99,21 @@ public class LocalizationManager
 
 		key = key.Trim();
 
-		if (_localizationDictionary[_currentLanguage].TryGetValue(key, out string localizedString))
+		if (_localizationDictionary.TryGetValue(_currentLanguage, out var currentLanguageTable)
+			&& currentLanguageTable.TryGetValue(key, out string localizedString)
+			&& !string.IsNullOrEmpty(localizedString))
 		{
 			return localizedString;
 		}
+
+		// Fallback to English if key is missing/empty in selected language.
+		if (_localizationDictionary[Language.EN].TryGetValue(key, out string englishString)
+			&& !string.IsNullOrEmpty(englishString))
+		{
+			return englishString;
+		}
+
+		Debug.LogWarning($"Missing localization for key: {key} in language: {_currentLanguage}");
 		return "Missing Localization";
 	}
 
@@ -109,10 +128,20 @@ public class LocalizationManager
 
 		key = key.Trim();
 
-		if (_localizationDictionary[targetLanguage].TryGetValue(key, out string localizedString))
+		if (_localizationDictionary.TryGetValue(targetLanguage, out var targetLanguageTable)
+			&& targetLanguageTable.TryGetValue(key, out string localizedString)
+			&& !string.IsNullOrEmpty(localizedString))
 		{
 			return localizedString;
 		}
+
+		if (_localizationDictionary[Language.EN].TryGetValue(key, out string englishString)
+			&& !string.IsNullOrEmpty(englishString))
+		{
+			return englishString;
+		}
+
+		Debug.LogWarning($"Missing localization for key: {key} in language: {targetLanguage}");
 		return "Missing Localization";
 	}
 }

@@ -1,7 +1,9 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 /// <summary>
@@ -31,6 +33,10 @@ public class LocalizationCollection : ScriptableObject
 	/// </summary>
 	public void PopulateDataFromCSV()
 	{
+#if !UNITY_EDITOR
+		Debug.LogWarning("PopulateDataFromCSV is only supported in Unity Editor.");
+		return;
+#else
 		// Khởi tạo DataTable nếu null
 		if (DataTable == null)
 			DataTable = new List<LocalizationData>();
@@ -50,10 +56,18 @@ public class LocalizationCollection : ScriptableObject
 			return;
 		}
 
-		DataTable.Clear();
-		DataTable.AddRange(CSVImporter.Parse<LocalizationData>(textAsset.ToString()));
+		if (string.IsNullOrWhiteSpace(textAsset.text))
+		{
+			Debug.LogError($"CSV content for {nameof(LocalizationData)} is empty.");
+			return;
+		}
 
+		DataTable.Clear();
+		DataTable.AddRange(CSVImporter.Parse<LocalizationData>(textAsset.text));
+
+		EditorUtility.SetDirty(this);
 		AssetDatabase.SaveAssets();
 		Debug.Log($"Populated {DataTable.Count} localization entries from CSV");
+#endif
 	}
 }

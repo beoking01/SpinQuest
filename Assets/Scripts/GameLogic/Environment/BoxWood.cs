@@ -17,7 +17,7 @@ public class BoxWood : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Kiểm tra nếu va chạm với player
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.collider.CompareTag("Head"))
         {
             Debug.Log("Collision");
             // Kiểm tra vận tốc rơi (theo trục y)

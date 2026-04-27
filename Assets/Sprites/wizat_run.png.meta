@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: dad4eeca900af784e8e7a5fae3fbb0dd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3068605275717441512
+    second: wizat_run_0
+  - first:
+      213: 8687019942139281247
+    second: wizat_run_1
+  - first:
+      213: 1565088481048747870
+    second: wizat_run_2
+  - first:
+      213: -1370759473509777545
+    second: wizat_run_3
+  - first:
+      213: 335881844717555336
+    second: wizat_run_4
+  - first:
+      213: 8798233601543750093
+    second: wizat_run_5
+  - first:
+      213: -1853182833681221282
+    second: wizat_run_6
+  - first:
+      213: -6753527815912516963
+    second: wizat_run_7
+  - first:
+      213: -2179628854222799343
+    second: wizat_run_8
+  - first:
+      213: 1260160365002367674
+    second: wizat_run_9
+  - first:
+      213: 5474639412991377167
+    second: wizat_run_10
+  - first:
+      213: -8225207530121226103
+    second: wizat_run_11
+  - first:
+      213: -8877302294470786714
+    second: wizat_run_12
+  - first:
+      213: -8772233775392756281
+    second: wizat_run_13
+  - first:
+      213: 9143855202376256771
+    second: wizat_run_14
+  - first:
+      213: 2733717262487343523
+    second: wizat_run_15
+  - first:
+      213: 3306978240326123907
+    second: wizat_run_16
+  - first:
+      213: -402837683725275759
+    second: wizat_run_17
+  - first:
+      213: 8764093118089291598
+    second: wizat_run_18
+  - first:
+      213: -1748601100158894847
+    second: wizat_run_19
+  - first:
+      213: -8905957748720809845
+    second: wizat_run_20
+  - first:
+      213: 8384021125503271858
+    second: wizat_run_21
+  - first:
+      213: -1975103136139847495
+    second: wizat_run_22
+  - first:
+      213: -155243875039449966
+    second: wizat_run_23
+  - first:
+      213: 3966116817617489141
+    second: wizat_run_24
+  - first:
+      213: -3702131214277007174
+    second: wizat_run_25
+  - first:
+      213: 6555455516501059612
+    second: wizat_run_26
+  - first:
+      213: -3279149233112002425
+    second: wizat_run_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wizat_run_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 757
+        width: 65
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e717077d30e59a20800000000000000
+      internalID: 3068605275717441512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 757
+        width: 66
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f32ff8c9e7e8870800000000000000
+      internalID: 8687019942139281247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_2
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 757
+        width: 66
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f57fa6eaf48b510800000000000000
+      internalID: 1565088481048747870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_3
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 756
+        width: 66
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77fb2fc75851afce0800000000000000
+      internalID: -1370759473509777545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 631
+        width: 68
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e84e812ca49a400800000000000000
+      internalID: 335881844717555336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_5
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 630
+        width: 69
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1cbe678da991a70800000000000000
+      internalID: 8798233601543750093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_6
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 630
+        width: 70
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e593496080c2846e0800000000000000
+      internalID: -1853182833681221282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_7
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 630
+        width: 70
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9290dfab36a642a0800000000000000
+      internalID: -6753527815912516963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_8
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 504
+        width: 70
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ebbd1fa1760c1e0800000000000000
+      internalID: -2179628854222799343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_9
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 506
+        width: 71
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab22ef3ec2dfc7110800000000000000
+      internalID: 1260160365002367674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_10
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 506
+        width: 71
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f34bc4a83d9fb40800000000000000
+      internalID: 5474639412991377167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_11
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 506
+        width: 70
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988914394513add80800000000000000
+      internalID: -8225207530121226103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_12
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 379
+        width: 70
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6610f4ed89c7dc480800000000000000
+      internalID: -8877302294470786714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_13
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 379
+        width: 68
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cde70bcbd3c24680800000000000000
+      internalID: -8772233775392756281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_14
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 379
+        width: 67
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d8e3f3cdf75ee70800000000000000
+      internalID: 9143855202376256771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_15
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 379
+        width: 66
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a159eacd5d10f520800000000000000
+      internalID: 2733717262487343523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_16
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 254
+        width: 66
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 381c59e303fb4ed20800000000000000
+      internalID: 3306978240326123907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_17
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 255
+        width: 65
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19de96fc245d86af0800000000000000
+      internalID: -402837683725275759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_18
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 255
+        width: 66
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e47682ab14050a970800000000000000
+      internalID: 8764093118089291598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_19
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 255
+        width: 67
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dfb2b5098bbb7e0800000000000000
+      internalID: -1748601100158894847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_20
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 129
+        width: 69
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b88cbd20d9ea76480800000000000000
+      internalID: -8905957748720809845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_21
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 129
+        width: 70
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b34efe0bc60a5470800000000000000
+      internalID: 8384021125503271858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_22
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 129
+        width: 73
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b8df9789260794e0800000000000000
+      internalID: -1975103136139847495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_23
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 129
+        width: 75
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ce7b6a48678ddf0800000000000000
+      internalID: -155243875039449966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_24
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 5
+        width: 73
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc0bc37b3a7a0730800000000000000
+      internalID: 3966116817617489141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_25
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 4
+        width: 73
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8222d76436f9cc0800000000000000
+      internalID: -3702131214277007174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_26
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 4
+        width: 70
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18abe95f08a9fa50800000000000000
+      internalID: 6555455516501059612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizat_run_27
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 4
+        width: 68
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7805dda652f1e72d0800000000000000
+      internalID: -3279149233112002425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wizat_run_0: 3068605275717441512
+      wizat_run_1: 8687019942139281247
+      wizat_run_10: 5474639412991377167
+      wizat_run_11: -8225207530121226103
+      wizat_run_12: -8877302294470786714
+      wizat_run_13: -8772233775392756281
+      wizat_run_14: 9143855202376256771
+      wizat_run_15: 2733717262487343523
+      wizat_run_16: 3306978240326123907
+      wizat_run_17: -402837683725275759
+      wizat_run_18: 8764093118089291598
+      wizat_run_19: -1748601100158894847
+      wizat_run_2: 1565088481048747870
+      wizat_run_20: -8905957748720809845
+      wizat_run_21: 8384021125503271858
+      wizat_run_22: -1975103136139847495
+      wizat_run_23: -155243875039449966
+      wizat_run_24: 3966116817617489141
+      wizat_run_25: -3702131214277007174
+      wizat_run_26: 6555455516501059612
+      wizat_run_27: -3279149233112002425
+      wizat_run_3: -1370759473509777545
+      wizat_run_4: 335881844717555336
+      wizat_run_5: 8798233601543750093
+      wizat_run_6: -1853182833681221282
+      wizat_run_7: -6753527815912516963
+      wizat_run_8: -2179628854222799343
+      wizat_run_9: 1260160365002367674
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

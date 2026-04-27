@@ -19,19 +19,20 @@ Thay vì chỉ nhảy và di chuyển như platformer thông thường, người
 
 ⬇️ Thêm GIF gameplay di chuyển tại đây
 
-Assets/gifs/player_movement.gif
+![Player Move](Assets/gifs/player_movement.gif)
 
 - Map Rotation Mechanic
 
 ⬇️ Thêm GIF mechanic xoay map tại đây
 
-Assets/gifs/map_rotation.gif
+![Map Rotation](Assets/gifs/map_rotation.gif)
 
 - Puzzle Example
 
 ⬇️ Thêm GIF giải puzzle tại đây
 
-Assets/gifs/puzzle_example.gif
+![Puzzle example](Assets/gifs/puzzle_example.gif)
+
 
 🎮 Controls
 - Key	Action

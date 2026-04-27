@@ -2,7 +2,9 @@ using System;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using UnityEngine.Networking;
 using Cysharp.Threading.Tasks;
@@ -50,6 +52,9 @@ public class CSVCollectionManager : ScriptableObject
 	/// <returns></returns>
 	public TextAsset GetCollection(string collectionName)
 	{
+		if (Collection == null)
+			return null;
+
 		foreach (var item in Collection)
 		{
 			if (item.name == collectionName)
@@ -66,7 +71,7 @@ public class CSVCollectionManager : ScriptableObject
 	{
 		if (DownloadData == null || DownloadData.Count == 0)
 		{
-			EditorUtility.DisplayDialog("Error", "DownloadData is empty!", "OK");
+			ShowDialog("Error", "DownloadData is empty!");
 			return;
 		}
 
@@ -86,12 +91,10 @@ public class CSVCollectionManager : ScriptableObject
 			if (webRequest.result == UnityWebRequest.Result.Success)
 			{
 				string csv = webRequest.downloadHandler.text;
-				string savePath = string.Format(DownloadPathTemplate, data.ClassName);
+				string savePath = GetSavePath(data.ClassName);
 
 				File.WriteAllText(savePath, csv);
-				AssetDatabase.Refresh();
-
-				var textAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(savePath);
+				var textAsset = RefreshAndLoadTextAsset(savePath);
 				if (textAsset != null)
 				{
 					Collection.Add(textAsset);
@@ -99,11 +102,30 @@ public class CSVCollectionManager : ScriptableObject
 			}
 			else
 			{
-				EditorUtility.DisplayDialog("Error", $"Failed to download: {url}\n{webRequest.error}", "OK");
+				ShowDialog("Error", $"Failed to download: {url}\n{webRequest.error}");
 			}
 		}
 
-		EditorUtility.DisplayDialog("Download CSV", "Download CSV finish", "OK");
+		ShowDialog("Download CSV", "Download CSV finish");
+	}
+
+	private static void ShowDialog(string title, string message)
+	{
+#if UNITY_EDITOR
+		EditorUtility.DisplayDialog(title, message, "OK");
+#else
+		Debug.Log($"{title}: {message}");
+#endif
+	}
+
+	private static TextAsset RefreshAndLoadTextAsset(string savePath)
+	{
+#if UNITY_EDITOR
+		AssetDatabase.Refresh();
+		return AssetDatabase.LoadAssetAtPath<TextAsset>(savePath);
+#else
+		return null;
+#endif
 	}
 }
 [Serializable]
