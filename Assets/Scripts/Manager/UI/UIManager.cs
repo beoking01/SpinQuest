@@ -50,11 +50,13 @@ public class UIManager : MonoBehaviour
 
     public void RestartGame()
     {
+        if (gameOverUI != null) gameOverUI.SetActive(false);
+        if (gameWinUI != null) gameWinUI.SetActive(false);
+        if (pauseUI != null) pauseUI.SetActive(false);
+
+        GameManager.Instance.ResetGameState();
         string currentSence = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSence);
-        Time.timeScale = 1f;
-        gameWinUI.SetActive(false);
-        GameManager.Instance.ResumeGame();
     }
     public void NextGame()
     {

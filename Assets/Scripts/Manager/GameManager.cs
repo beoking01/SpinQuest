@@ -25,10 +25,20 @@ public class GameManager : MonoBehaviour
     public bool IsOpen() => isOpen;
     public bool isWinGame() => isWin;
 
+    public void ResetGameState()
+    {
+        StopAllCoroutines();
+        isPlay = true;
+        isOpen = false;
+        isWin = false;
+        Time.timeScale = 1f;
+    }
+
     public void OpenDoor() => isOpen = true;
 
     public void GameOver()
     {
+        StopAllCoroutines();
         isOpen = false;
         isPlay = false;
         isWin = false;
@@ -43,6 +53,7 @@ public class GameManager : MonoBehaviour
     
     public void WinGame()
     {
+        StopAllCoroutines();
         isPlay = false;
         isOpen = false;
         isWin = true;

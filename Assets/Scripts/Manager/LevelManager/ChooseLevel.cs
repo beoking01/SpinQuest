@@ -8,12 +8,10 @@ public class ChooseLevel : MonoBehaviour
         // Kiểm tra khóa
         if (LevelManager.Instance != null && !LevelManager.Instance.IsUnlocked(levelName))
         {
-            Debug.Log("Level locked: " + levelName);
-            // Hiện UI thông báo nếu cần
             return;
         }
 
-        SceneManager.LoadScene(levelName);
         Time.timeScale = 1;
+        SceneManager.LoadScene(levelName);
     }
 }
